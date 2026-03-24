@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timetable Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="timetable-body">
+
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="10" width="36" height="32" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M16 6v8M32 6v8M6 22h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="14" y="28" width="6" height="6" rx="1.5" fill="currentColor" opacity="0.8"/>
+            <rect x="21" y="28" width="6" height="6" rx="1.5" fill="currentColor" opacity="0.6"/>
+            <rect x="28" y="28" width="6" height="6" rx="1.5" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">Timetable Management System</h1>
+          <p class="brand-sub">Academic Schedule Planner</p>
+        </div>
+      </div>
+
+      <div class="header-student">
+        <div class="student-avatar">A</div>
+        <div class="student-details">
+          <span class="student-name"><stong>Aditya sharma</stong></span>
+          <span class="student-meta">uis: 25BSC10021 &nbsp;·&nbsp; B.sci(cs) &nbsp;·&nbsp; Sem II</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <main class="site-main">
+
+    
+    <section class="greeting-section">
+      <div class="greeting-inner">
+        <div>
+          <h2 class="greeting-title">Your Weekly Schedule</h2>
+          <p class="greeting-sub">Academic Year 2024–25 &nbsp;|&nbsp; Spring Semester</p>
+        </div>
+        <div class="current-day-badge" id="currentDayBadge"></div>
+      </div>
+    </section>
+
+    
+    <section class="timetable-section">
+      <div class="timetable-wrapper">
+
+        
+        <div class="time-axis">
+          <div class="time-axis-header">Time</div>
+          <div class="time-slot-label">9:00 AM</div>
+          <div class="time-slot-label">10:00 AM</div>
+          <div class="time-slot-label">11:00 AM</div>
+          <div class="time-slot-label">12:00 PM</div>
+          <div class="time-slot-label break-label">Break</div>
+          <div class="time-slot-label">1:00 PM</div>
+          <div class="time-slot-label">2:00 PM</div>
+          <div class="time-slot-label">3:00 PM</div>
+        </div>
+
+        
+        <div class="days-grid">
+
+          
+          <div class="day-column" id="col-monday">
+            <div class="day-header">
+              <span class="day-name">Monday</span>
+              <span class="day-short">MON</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Designing</span>
+              <span class="subj-time">9–10 AM</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA</span>
+              <span class="subj-time">10–11 AM</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics</span>
+              <span class="subj-time">11–12 PM</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">12–1 PM</span>
+            </div>
+            <div class="subject-cell break-cell">
+              <span class="subj-name">Lunch Break</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">1–2 PM</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Designing</span>
+              <span class="subj-time">2–3 PM</span>
+            </div>
+            <div class="subject-cell free-cell">
+              <span class="subj-name">Free Period</span>
+            </div>
+          </div>
+
+          
+          <div class="day-column" id="col-tuesday">
+            <div class="day-header">
+              <span class="day-name">Tuesday</span>
+              <span class="day-short">TUE</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">9–10 AM</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics</span>
+              <span class="subj-time">10–11 AM</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA</span>
+              <span class="subj-time">11–12 PM</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Designing</span>
+              <span class="subj-time">12–1 PM</span>
+            </div>
+            <div class="subject-cell break-cell">
+              <span class="subj-name">Lunch Break</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">1–2 PM</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">2–3 PM</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA Lab</span>
+              <span class="subj-time">3–4 PM</span>
+            </div>
+          </div>
+
+          
+          <div class="day-column" id="col-wednesday">
+            <div class="day-header">
+              <span class="day-name">Wednesday</span>
+              <span class="day-short">WED</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA</span>
+              <span class="subj-time">9–10 AM</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">10–11 AM</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">11–12 PM</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics</span>
+              <span class="subj-time">12–1 PM</span>
+            </div>
+            <div class="subject-cell break-cell">
+              <span class="subj-name">Lunch Break</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Designing</span>
+              <span class="subj-time">1–2 PM</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Design Lab</span>
+              <span class="subj-time">2–3 PM</span>
+            </div>
+            <div class="subject-cell free-cell">
+              <span class="subj-name">Free Period</span>
+            </div>
+          </div>
+
+          
+          <div class="day-column" id="col-thursday">
+            <div class="day-header">
+              <span class="day-name">Thursday</span>
+              <span class="day-short">THU</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">9–10 AM</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">10–11 AM</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Designing</span>
+              <span class="subj-time">11–12 PM</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA</span>
+              <span class="subj-time">12–1 PM</span>
+            </div>
+            <div class="subject-cell break-cell">
+              <span class="subj-name">Lunch Break</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics Lab</span>
+              <span class="subj-time">1–2 PM</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics Lab</span>
+              <span class="subj-time">2–3 PM</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">3–4 PM</span>
+            </div>
+          </div>
+
+        
+          <div class="day-column" id="col-friday">
+            <div class="day-header">
+              <span class="day-name">Friday</span>
+              <span class="day-short">FRI</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics</span>
+              <span class="subj-time">9–10 AM</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA</span>
+              <span class="subj-time">10–11 AM</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">11–12 PM</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">12–1 PM</span>
+            </div>
+            <div class="subject-cell break-cell">
+              <span class="subj-name">Lunch Break</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Design Lab</span>
+              <span class="subj-time">1–2 PM</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Design Lab</span>
+              <span class="subj-time">2–3 PM</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">3–4 PM</span>
+            </div>
+          </div>
+
+          
+          <div class="day-column" id="col-saturday">
+            <div class="day-header">
+              <span class="day-name">Saturday</span>
+              <span class="day-short">SAT</span>
+            </div>
+            <div class="subject-cell math">
+              <span class="subj-name">Mathematics</span>
+              <span class="subj-time">9–10 AM</span>
+            </div>
+            <div class="subject-cell webdesign">
+              <span class="subj-name">Web Designing</span>
+              <span class="subj-time">10–11 AM</span>
+            </div>
+            <div class="subject-cell dsa">
+              <span class="subj-name">DSA</span>
+              <span class="subj-time">11–12 PM</span>
+            </div>
+            <div class="subject-cell free-cell">
+              <span class="subj-name">Free Period</span>
+            </div>
+            <div class="subject-cell break-cell">
+              <span class="subj-name">Lunch Break</span>
+            </div>
+            <div class="subject-cell optics">
+              <span class="subj-name">Optics</span>
+              <span class="subj-time">1–2 PM</span>
+            </div>
+            <div class="subject-cell english">
+              <span class="subj-name">English</span>
+              <span class="subj-time">2–3 PM</span>
+            </div>
+            <div class="subject-cell free-cell">
+              <span class="subj-name">Free Period</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="legend-section">
+      <h3 class="legend-title">Subject Legend</h3>
+      <div class="legend-grid">
+        <div class="legend-item">
+          <span class="legend-dot webdesign-dot"></span>
+          <span class="legend-label">Web Designing</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot dsa-dot"></span>
+          <span class="legend-label">Data Structure &amp; Algorithm</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot optics-dot"></span>
+          <span class="legend-label">Optics</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot math-dot"></span>
+          <span class="legend-label">Mathematics</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot english-dot"></span>
+          <span class="legend-label">English</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot free-dot"></span>
+          <span class="legend-label">Free Period</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot break-dot"></span>
+          <span class="legend-label">Lunch Break</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-text">
+        Timetable Management System &nbsp;·&nbsp; bsci(cs), Semester II <I>
+        </I> &nbsp;·&nbsp; Academic Year 2026-29
+      </p>
+      <p class="footer-credit">Designed &amp; Developed by <strong>Aditya sharma</strong> &amp; <strong>krishlay raj singh</strong></p>
+    </div>
+  </footer>
+
+  <script>
+    const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+    const today = days[new Date().getDay()];
+    const col = document.getElementById('col-' + today);
+    if (col) {
+      col.classList.add('today');
+      const badge = document.getElementById('currentDayBadge');
+      badge.textContent = 'Today: ' + today.charAt(0).toUpperCase() + today.slice(1);
+      badge.classList.add('visible');
+    }
+  </script>
+</body>
+</html>
